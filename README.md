@@ -1,1 +1,1 @@
-![example workflow](https://github.com/Inozem/yamdb_final/actions/workflows/main.yaml)
+![example workflow](https://github.com/inozem/yamdb_final/actions/workflows/main.yaml)
