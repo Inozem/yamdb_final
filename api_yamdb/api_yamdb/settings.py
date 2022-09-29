@@ -10,7 +10,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', default='SECRET_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['130.193.53.119', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*'] #['130.193.53.119', 'localhost', '127.0.0.1']
 
 MAIL = 'from@example.com'
 
