@@ -28,9 +28,9 @@ jobs:
         cd api_yamdb/
         python manage.py test
 
-    #- name: Test with pytest
-      #run: |
-        #pytest
+    - name: Test with pytest
+      run: |
+        pytest
 
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
@@ -56,6 +56,7 @@ jobs:
   
   deploy:
     runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/master' }}
     needs: build_and_push_to_docker_hub
     steps:
       - name: executing remote ssh commands to deploy
@@ -81,6 +82,7 @@ jobs:
 
   send_message:
     runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/master' }}
     needs: deploy
     steps:
     - name: send message
