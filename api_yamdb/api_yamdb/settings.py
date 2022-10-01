@@ -8,9 +8,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.getenv('SECRET_KEY', default='SECRET_KEY')
 
-DEBUG = True
+DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['130.193.53.119', 'localhost', '127.0.0.1', 'web']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split()
 
 MAIL = 'from@example.com'
 
